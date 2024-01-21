@@ -9,7 +9,7 @@ edition = "2021"
 proc-macro = true
 
 [dependencies]
-ragent = { git = "https://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@github.com/empathic-ai/ragent.git" }
+ragent = { git = "https://github.com/empathic-ai/ragent.git" }
 syn = { version = "2.0.39", features = ["full"] }
 quote = "1.0.33"
 bevy = { version = "0.11.0", default-features = false, features = ["bevy_ui", "webgl2", "bevy_audio", "bevy_gizmos", "bevy_render", "bevy_pbr", "bevy_asset"] }
