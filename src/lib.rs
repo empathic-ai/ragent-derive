@@ -3,7 +3,7 @@ extern crate syn;
 #[macro_use]
 extern crate quote;
 
-use ragent::prelude::*;
+use ragent_core::prelude::*;
 use proc_macro::TokenStream;
 
 #[proc_macro_derive(Task)]
@@ -17,7 +17,7 @@ pub fn task(input: TokenStream) -> TokenStream {
     // Build the impl
     let name = &ast.ident;
     let gen = quote! {
-        impl ragent::prelude::Task for #name {
+        impl ragent_core::prelude::Task for #name {
         }
     };
     TokenStream::from(gen)
