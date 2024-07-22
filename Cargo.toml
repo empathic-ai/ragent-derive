@@ -12,5 +12,10 @@ proc-macro = true
 ragent_core = { git = "https://github.com/empathic-ai/ragent-core.git" }
 syn = { version = "2.0.39", features = ["full"] }
 quote = "1.0.33"
-bevy = { version = "0.13.0", default-features = false }
 derive-syn-parse = "0.1.5"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+bevy = { version = "=0.13.0", default-features = false, features = ["dynamic_linking"], optional = true }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+bevy = { version = "=0.13.0", default-features = false, optional = true }
