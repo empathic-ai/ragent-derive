@@ -9,9 +9,8 @@ edition = "2024"
 proc-macro = true
 
 [dependencies]
-ragent_core = { git = "https://github.com/empathic-ai/ragent-core.git", default-features = false }
-syn = { version = "2.0.39", features = ["full"] }
+# DeriveInput uses Syn's default derive/parsing support; full Rust syntax is unnecessary.
+syn = "2.0.39"
 quote = "1.0.33"
-derive-syn-parse = "0.1.5"
 proc-macro-crate = "3.2.0"
 proc-macro2 = "1.0.92"
